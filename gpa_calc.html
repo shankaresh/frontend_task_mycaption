@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head> <meta charset="utf-8"> <link rel="stylesheet" type="text/css"
+href="styles.css"> <title>GPA CALCULATOR</title> 
+<script type="text/javascript">
+	function calculate()
+	{
+		var x1=document.getElementById("result1").innerText;
+        var x2=document.getElementById("result2").innerText;
+		var x3=document.getElementById("result3").innerText;
+		var x4=document.getElementById("result4").innerText;
+		var x5=document.getElementById("result5").innerText;
+		var result1=parseFloat(x1) + parseFloat(x2) + parseFloat(x3) + parseFloat(x4) +  parseFloat(x5);
+		var html="<p>Your GPA is: ("+(result1/5)*2+") out of 10</p>";
+		document.getElementById("result").innerHTML=html;
+	}
+</script>
+</head>
+<body>
+    <h1><u>GPA for Five Subjects</u></h1>
+    <p><b>*Update grade of the each subject and check the GPA</b></p>
+    <p>-> Enter grade in the following sippnets ( O, A+, A, B+, B, C+, C, D+, D, F)</p>
+    <p>-> Not case-sensitive</p>
+    <p>-> Absentees get no credits</p>
+    <p>-> Invalid grade are taken as zero credits</p>
+    <br><hr>
+<script language="JavaScript">
+function calculateGpa1 (form) {
+    var gpa = form.gpa1.value;
+    if (gpa == "O" || "o") { gpa = 5; }
+    else if (gpa == "A+" || "a+") { gpa = 4.5; }
+    else if (gpa == "A" || "a") { gpa = 4; }
+    else if (gpa == "B+" || "b+") { gpa = 3.5; }
+    else if (gpa == "B" || "b") { gpa = 3; }
+    else if (gpa == "C+" || "c+") { gpa = 2.5; }
+    else if (gpa == "C" || "c") { gpa = 2; }
+    else if (gpa == "D+" || "d+") { gpa = 1.5; }
+    else if (gpa == "D" || "d") { gpa = 1; }
+    else if (gpa == "F" || "f") { gpa = 0.5; }
+    else { gpa = 0; }
+    document.getElementById("result1").innerHTML = gpa;
+}
+</script>
+<form action="" id="language1">Language:<br>
+<input type="text" name="gpa1" value="">
+<input type="button" name="button" value="update" onClick="calculateGpa1(this.form)">
+</form>
+<div id="result1"></div>
+
+<br>
+<script language="JavaScript">
+function calculateGpa2 (form) {
+    var gpa = form.gpa2.value;
+    if (gpa == "O" || "o") { gpa = 5; }
+    else if (gpa == "A+" || "a+") { gpa = 4.5; }
+    else if (gpa == "A" || "a") { gpa = 4; }
+    else if (gpa == "B+" || "b+") { gpa = 3.5; }
+    else if (gpa == "B" || "b") { gpa = 3; }
+    else if (gpa == "C+" || "c+") { gpa = 2.5; }
+    else if (gpa == "C" || "c") { gpa = 2; }
+    else if (gpa == "D+" || "d+") { gpa = 1.5; }
+    else if (gpa == "D" || "d") { gpa = 1; }
+    else if (gpa == "F" || "f") { gpa = 0.5; }
+    else { gpa = 0; }
+    document.getElementById("result2").innerHTML = gpa;
+}
+</script>
+<form action="" id="english">English:<br>
+<input type="text" name="gpa2" value="">
+<input type="button" name="button" value="update" onClick="calculateGpa2(this.form)">
+</form>
+<div id="result2"></div>
+
+<br>
+<script language="JavaScript">
+function calculateGpa3 (form) {
+    var gpa = form.gpa3.value;
+    if (gpa == "O" || "o") { gpa = 5; }
+    else if (gpa == "A+" || "a+") { gpa = 4.5; }
+    else if (gpa == "A" || "a") { gpa = 4; }
+    else if (gpa == "B+" || "b+") { gpa = 3.5; }
+    else if (gpa == "B" || "b") { gpa = 3; }
+    else if (gpa == "C+" || "c+") { gpa = 2.5; }
+    else if (gpa == "C" || "c") { gpa = 2; }
+    else if (gpa == "D+" || "d+") { gpa = 1.5; }
+    else if (gpa == "D" || "d") { gpa = 1; }
+    else if (gpa == "F" || "f") { gpa = 0.5; }
+    else { gpa = 0; }
+    document.getElementById("result3").innerHTML = gpa;
+}
+</script>
+<form action="" id="maths">Maths:<br>
+<input type="text" name="gpa3" value="">
+<input type="button" name="button" value="update" onClick="calculateGpa3(this.form)">
+</form>
+<div id="result3"></div>
+
+<br>
+<script language="JavaScript">
+function calculateGpa4(form) {
+    var gpa = form.gpa4.value;
+    if (gpa == "O" || "o") { gpa = 5; }
+    else if (gpa == "A+" || "a+") { gpa = 4.5; }
+    else if (gpa == "A" || "a") { gpa = 4; }
+    else if (gpa == "B+" || "b+") { gpa = 3.5; }
+    else if (gpa == "B" || "b") { gpa = 3; }
+    else if (gpa == "C+" || "c+") { gpa = 2.5; }
+    else if (gpa == "C" || "c") { gpa = 2; }
+    else if (gpa == "D+" || "d+") { gpa = 1.5; }
+    else if (gpa == "D" || "d") { gpa = 1; }
+    else if (gpa == "F" || "f") { gpa = 0.5; }
+    else { gpa = 0; }
+    document.getElementById("result4").innerHTML = gpa;
+}
+</script>
+<form action="" id="science">Science:<br>
+<input type="text" name="gpa4" value="">
+<input type="button" name="button" value="update" onClick="calculateGpa4(this.form)">
+</form>
+<div id="result4"></div>
+
+<br>
+<script language="JavaScript">
+    function calculateGpa5(form) {
+        var gpa = form.gpa5.innerText;
+        if (gpa == "O" || "o") { gpa = 5; }
+        else if (gpa == "A+" || "a+") { gpa = 4.5; }
+        else if (gpa == "A" || "a") { gpa = 4; }
+        else if (gpa == "B+" || "b+") { gpa = 3.5; }
+        else if (gpa == "B" || "b") { gpa = 3; }
+        else if (gpa == "C+" || "c+") { gpa = 2.5; }
+        else if (gpa == "C" || "c") { gpa = 2; }
+        else if (gpa == "D+" || "d+") { gpa = 1.5; }
+        else if (gpa == "D" || "d") { gpa = 1; }
+        else if (gpa == "F" || "f") { gpa = 0.5; }
+        else { gpa = 0; }
+        document.getElementById("result5").innerHTML = gpa;
+    }
+</script>
+<form action="" id="social">Social:<br>
+    <input type="text" name="gpa5" value="">
+    <input type="button" name="button" value="update" onClick="calculateGpa5(this.form)">
+</form>
+<div id="result5"></div>
+<br>
+<br>
+<input type="button" id="final" name="button" value="Calculate" onClick="calculate()">
+<div id="result"></div>
+<hr>
+</body>
+</html>
